@@ -30,7 +30,7 @@ class Left_Recurtion {
         }*/
         //System.out.println("");
         String temp = input3[0].substring(0, input2[0].length());
-        //System.out.println(temp);
+        System.out.println(temp);
         if (input2[0].equals(temp)) {
 
             String lhs1 = input2[0];

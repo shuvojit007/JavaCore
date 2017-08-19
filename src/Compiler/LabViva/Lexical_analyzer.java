@@ -12,7 +12,6 @@ import java.util.StringTokenizer;
  * Created by SHOBOJIT on 8/19/2017.
  */
 public class Lexical_analyzer {
-    //WriteFile write=new WriteFile();
     static Character c;
     static String[] keyword={"int","float","double","char","string","main","return","stdio.h","printf","scanf","while","for","do","include","void","long","short","if","else","break","continue","void","public","static","private","void"};
     static List validkeyword= Arrays.asList(keyword);
@@ -29,7 +28,6 @@ public class Lexical_analyzer {
         try{
             BufferedReader br = new BufferedReader(new FileReader("lexicalanalyzer"));
             while((allfile=br.readLine())!=null){
-                //System.out.println(allfile);
                 for(int i=0;i<allfile.length();i++){
                     if(commentStart==true){
                         while(allfile.charAt(i)!='*'){
@@ -52,7 +50,6 @@ public class Lexical_analyzer {
                         i+=1;
                         if(allfile.charAt(i)=='/'){
                             allfile=allfile.substring(0,allfile.lastIndexOf('/')-1);
-                            // System.out.print(allfile);
                             break;
                         }
                         else if(allfile.charAt(i)=='*'){
@@ -94,9 +91,7 @@ public class Lexical_analyzer {
             get_line=whole_file.get(i);
             StringTokenizer tokenizer=new StringTokenizer(get_line," \t\n(){}[];,!%#<>^&|+-*/=",true);
             while(tokenizer.hasMoreTokens()){
-                //System.out.println(tokenizer.nextElement());
                 get_word=(String) tokenizer.nextElement();
-                //System.out.println(get_word);
                 if(!checkDigit(get_word)){
                     //as the string is not digit check if it contains alphabet or not
                     if(checkAlphabet(get_word)){
@@ -140,9 +135,7 @@ public class Lexical_analyzer {
                       //  write.write_file(get_word+"\tSYMBOL");
                         System.out.println(get_word+"\tSYMBOL");
                     }
-//                   else if(checkSpace(get_word)){
-//                       write.write_file(get_word+"\tSPACE");
-//                   }
+
 
                 }
                 else if(checkDigit(get_word)){

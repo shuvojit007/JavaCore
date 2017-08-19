@@ -4,14 +4,19 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /**
  * Created by SHOBOJIT on 8/19/2017.
  */
 public class Left_Factoring {
-    public static void main(String[] args) {
-        read();
+    private static Scanner in = new Scanner(System.in);
+    public static void main(String[ ] args) {
+        String data = in.nextLine();
+        common(data);
+
+       // read();
     }
 
     public static void read(){
