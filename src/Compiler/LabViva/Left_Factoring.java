@@ -13,10 +13,10 @@ import java.util.StringTokenizer;
 public class Left_Factoring {
     private static Scanner in = new Scanner(System.in);
     public static void main(String[ ] args) {
-        String data = in.nextLine();
-        common(data);
+        /*String data = in.nextLine();
+        common(data);*/
 
-       // read();
+        read();
     }
 
     public static void read(){
@@ -36,24 +36,31 @@ public class Left_Factoring {
         System.out.println("Input : "+line);
         System.out.println("LEFT FACTORING : ");
         StringTokenizer tokenizer=new StringTokenizer(line,"=|");
+      //  System.out.println(tokenizer.toString());
         String first=tokenizer.nextToken();
+       // System.out.println(first);
         String common="";
         ArrayList<String> tokens=new ArrayList<String>();
-
         tokens.clear();
-        while(tokenizer.hasMoreTokens()){
+        while(tokenizer.hasMoreTokens()) {
             tokens.add(tokenizer.nextToken());
         }
+   /*     for(String s:tokens){
+            System.out.print(s+" ");
+        }*/
+
         int max=0;
 
         for(int i=0;i<tokens.size()-1;i++){
             for(int j=i+1;j<tokens.size();j++){
+                //return the lenght of common string
                 int max2=LongestCommon(tokens.get(i),tokens.get(j));
+             //   System.out.println(max2);
                 if(max2>max){
                     max=max2;
                     common=tokens.get(i).substring(0, max);
                 }
-                //System.out.println("common ="+common);
+              //  System.out.println("common ="+common);
             }
         }
         factor(first,common, tokens);
@@ -91,14 +98,20 @@ public class Left_Factoring {
             if(next.equals(common)){
                 suffix.add("ε");
                 prefix.add(common);
+               // System.out.println("common  " + common);
+               // System.out.println("next " + next);
+
             }
             else if(next.startsWith(common)){
+               // System.out.println("common  " + common);
+               // System.out.println("next " + next);
                 prefix.add(common);
                 char[] charArray = next.toCharArray();
                 String x = new String(charArray,common.length(),next.length()-common.length());
                 suffix.add(x);
             }
             else{
+               // System.out.println(next);
                 prefix.add(next);
             }
         }
@@ -107,7 +120,9 @@ public class Left_Factoring {
 //            System.out.println("prefix= "+prefix.get(i));
 //
         int i;
+       // System.out.println("first "+first);
         String firstoutput=first+"="+common+first+"`|";
+        System.out.println(firstoutput);
         for(i=0;i<prefix.size();i++){
             if(i==prefix.size()-1)
                 break;
