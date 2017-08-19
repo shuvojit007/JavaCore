@@ -1,0 +1,28 @@
+ * 7 Steps to connect to the database in java
+ * 1. Import the Package
+ * 2. Load and Register the Driver
+ * 3. Establish Connection
+ * 4. Create the Statement - Statement , PrepareStatement , Callback Statement
+ * 5. Execute the query
+ * 6. Process Result
+ * 7. Close it
+
+
+ ***There are 4 types of JDBC drivers***
+    1. JDBC-ODBC bridge driver
+    2. Native-API driver (partially java driver)
+    3. Network Protocol driver (fully java driver)
+    4. Thin driver (fully java driver)
+
+    // For More go to this Link : https://www.javatpoint.com/jdbc-driver
+
+
+    The important methods of Statement interface are as follows:
+
+    1) public ResultSet executeQuery(String sql): is used to execute SELECT query. It returns the object of ResultSet.
+    2) public int executeUpdate(String sql): is used to execute specified query, it may be create, drop, insert, update, delete etc.
+    3) public boolean execute(String sql): is used to execute queries that may return multiple results.
+    4) public int[] executeBatch(): is used to execute batch of commands.
+
+
+ //FOR TUTORIAL : https://www.youtube.com/playlist?list=PLEoFgAiu8P5g7-igTND2bqFYqza4czuGQ
