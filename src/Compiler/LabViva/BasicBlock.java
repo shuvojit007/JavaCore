@@ -9,7 +9,7 @@ public class BasicBlock {
     public static void main(String[] args) {
         String line=new String();
         ArrayList<String> wholefile=new ArrayList<String>();
-        try {BufferedReader br = new BufferedReader(new FileReader("tt.txt"));
+        try {BufferedReader br = new BufferedReader(new FileReader("basicblock.txt"));
             while((line=br.readLine())!=null){
                 wholefile.add(line);
             }

@@ -1,0 +1,13 @@
+void main(){
+	int	a,b,sum;
+	a=5.6;
+	sum=a+b;/*ffdhgyjhj
+ghjftgj*/	if(a>b){
+/*dfghdrjdtjftk
+fghtdh*/
+		sum=5;
+//this is a comment
+		printf("greater");//this is also a comment
+
+	}
+}
