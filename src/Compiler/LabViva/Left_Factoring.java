@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /**
- * Created by SHOBOJIT on 8/19/2017.
+ * Created by SHOBOJIT on 8/11/2017.
  */
 public class Left_Factoring {
     private static Scanner in = new Scanner(System.in);
