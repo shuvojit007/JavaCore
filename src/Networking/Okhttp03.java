@@ -65,7 +65,7 @@ class FakeDataSource{
 
                 try {
                     JSONObject json  = new JSONObject(s);
-                    JSONArray jsr = json.getJSONArray("cse");
+                    JSONArray jsr = json.getJSONArray("ece");
                     for (int i = 0 ;i<jsr.length();i++){
                         DataItem dataItem = new DataItem(jsr.getJSONObject(i).getString("name").toString(),
                                 jsr.getJSONObject(i).getString("designation").toString(),

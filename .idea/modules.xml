@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaCore.iml" filepath="$PROJECT_DIR$/JavaCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.javacore.iml" filepath="$PROJECT_DIR$/.idea/modules/com.javacore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.javacore_main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.javacore_main.iml" group="com.javacore" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.javacore_test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.javacore_test.iml" group="com.javacore" />
     </modules>
   </component>
 </project>

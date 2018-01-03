@@ -177,7 +177,7 @@ public class Lexical_analyzer {
     }
     private static boolean checkLiteral(String get_word){
         if (get_word.charAt(0)=='\"' && get_word.charAt(get_word.length()-1)=='\"' ){
-            //System.out.print(get_word.charAt(0));
+            System.out.print(get_word.charAt(0));
             return true;
         }
         else
